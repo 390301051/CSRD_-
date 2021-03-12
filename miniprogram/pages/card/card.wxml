@@ -1,0 +1,19 @@
+<!--pages/card/card.wxml-->
+<view id="container" style="height:{{pageheight}}px;">  
+  <!-- 天气展示栏 -->
+  <view class="weather">
+    <view class="loc">
+      <view class="city"><image src="../../images/loc.png"></image><text>{{weather.city.data}}</text></view>
+      <view class="refresh" bindtap="getWeather"><image src="../../images/refresh.png"></image></view>
+    </view>
+    <view class="tips"><image src="../../images/wendu.png"></image><view class="midtips">{{weather.temperature.data}}℃</view><text >体感温度</text></view>
+    <view class="tips"><image src="../../images/shidu.png"></image><view class="midtips">{{weather.humidity.data}}</view><text >湿度</text></view>
+    <view class="tips"><image src="../../images/tianqi.png"></image><view class="midtips">{{weather.weather.data}}</view><text >天气</text></view>
+    <view class="tips"><image src="../../images/fengx.png"></image><view class="midtips">{{weather.winddirection.data}}</view><text >风向</text></view>
+    <view class="tips"><image src="../../images/power.png"></image><view class="midtips">{{weather.windpower.data}}</view><text >风力</text></view>
+  </view>
+  <image src="./clock.png" class="clock"></image>
+  <button class="cardbutton" type="primary" loading="{{sumbmit}}" bindtap="card" disabled="{{disabled}}">打卡</button>
+  <view class="loctime">{{loctime}}</view>
+  <image src="../../images/back.jpg" class="backimage" mode="center"> </image>
+</view>

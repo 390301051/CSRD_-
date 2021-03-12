@@ -1,0 +1,179 @@
+/* pages/list/list.wxss */
+#container{
+  width: 100%;
+  padding:0px;
+  margin:0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+#chose{
+  width: 100%;
+  height: 42px;
+  margin-top: 5px;
+  background-color: white;
+  border: 1.5px solid #65A6EE;
+  border-left: none;
+  border-right:none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 1;
+  top: 1px;
+}
+#chose .inputs{
+  width: 30%;
+  height: 40px;
+  /* padding:2px; */
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.inputs .mypicker{
+  border: none;
+}
+.datechose{
+  width: 20%;
+  height: 40px;
+ 
+  /* background-color: white;
+  border: 1.5px solid #65A6EE;
+  border-left: none;
+  border-right:none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mybutton{
+  width: 20%;
+  height: 40px;
+
+  /* background-color: white;
+  border: 1.5px solid #65A6EE;
+  border-left: none;
+  border-right:none; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.picker{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: cursive;
+  font-size: 14px;
+}
+.picker image{
+  width: 24px;
+  height: 24px;
+}
+
+.inputs text{
+ font-family: inherit;
+ font-size:14px;
+ font-weight: 600;
+ color: black;
+}
+.inputs  .picker{
+  width: 100%;
+  height: 40px;
+  /* background-color: white;
+  border: 1.5px solid #65A6EE;
+  border-right:none;
+  border-left: none; */
+
+  display: flex;
+  align-items: center;
+  font-size:16px;
+}
+.usercard{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap;
+  position: fixed;
+  top: 64px;
+  z-index: 0;
+  padding: 0px;
+}
+
+.topinfo{
+  width: 100%;
+  height: 80px;
+  background-color:rgba(255,255,255,0.95);
+  border-radius: 6px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+}
+/* 选择器匹配属于其父元素的第 N 个子元素，不论元素的类型。 */
+.topinfo:nth-child(1){  
+  margin-top: 0px !important;
+}
+.topinfo .userimage{
+  width: 150px;
+  height: 60px;
+  margin-left: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.userimage .myimage{
+  width: 60px;
+  height: 60px;
+  position: relative;
+}
+.userimage .headimage{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 6px;
+  top: -8px;
+  transform: rotateZ(-11deg);
+}
+.userimage .tips{
+  width: 90px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tips text{
+  text-align: center;
+}
+.userimage .myheadimage{
+  width: 60px;
+  height: 60px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+.topinfo .carddays{
+  margin-right: 2px;
+  font-family:cursive;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nodata{
+  width: 128px;
+  height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -64px;
+  margin-left: -64px;
+}
+.nodata image{
+  width: 128px;
+  height: 128px;
+}

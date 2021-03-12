@@ -1,0 +1,33 @@
+<view id="container" style="height:{{pageheight}}px;">
+<view class="inputs">
+  <text>输入您的姓名：</text>
+  <input class="nameinput" type="text" adjust-position="false"  placeholder="输入您的姓名" value="{{name}}" bindinput="nameinput"/>
+</view>
+<view class="inputs">
+  <radio-group bindchange="radioChange">
+        <label class="sexlable" wx:for="{{sex}}" wx:key="value">
+            <radio color="#007aff" value="{{item.value}}" checked="{{item.checked}}"/> <text class="">{{item.name}}</text>
+        </label>
+      </radio-group>
+</view>
+
+<view class="inputs">
+  <text>选择您所在部门：</text>
+  <picker bindchange="classPicker" value="{{classindex}}" range="{{Classarray}}">
+    <view class="picker">
+      当前选择：{{Classarray[classindex]}}
+    </view>
+  </picker>
+</view>
+<view class="inputs">
+  <text>选择您所在分公司：</text>
+  <picker bindchange="companyPicker" value="{{companyarrindex}}" range="{{companyarr}}">
+    <view class="picker">
+      当前选择：{{companyarr[companyarrindex]}}
+    </view>
+  </picker>
+</view>
+<button wx:if="{{!isupdate}}" type="primary" class="sumbit"  open-type="getUserInfo" bindgetuserinfo="registbtn">提交</button>
+<button wx:else type="primary" class="sumbit"  open-type="getUserInfo" bindgetuserinfo="registbtn">更新</button>
+<image src="../../images/back.jpg" class="backimage" mode="center" style="height:{{pageheight}}px;"> </image>
+</view>

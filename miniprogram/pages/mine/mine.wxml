@@ -1,0 +1,41 @@
+<!--pages/mine/mine.wxml-->
+<view id="container" style="height:{{pageheight}}px">
+  <image src="../../images/back2.png" mode="aspectFill"  class="backclass" style="height:{{pageheight}}px"></image>
+
+  <view class="topinfo">
+    <view class="userimage">
+      <image src="{{userimage}}" mode="center" ></image>
+      <view  wx:if="{{islogin}}" class="tips">
+        <text  style="font-family:cursive; font-size:18px">{{userinfo.name}}</text>
+        <text wx:if="{{iscard}}"  style=" font-family:cursive; font-size:14px; color:#07C160">今日已打卡</text>
+        <text wx:else  style=" font-family:cursive; font-size:14px; color:#A5A5A5">今日未打卡</text>
+      </view>
+    <button type="primary" wx:if="{{!islogin}}" size="mini" style="font-family:cursive;" bindtap="logIn">登录</button>
+  </view>
+
+    <view class="carddays"> 累计打卡<image src="../../images/card.png" style="width:20px; height:20px"></image>：{{userinfo.carddays}}天</view>
+  </view>
+
+  <view class="mineinfo" hover-class="hoverview" hover-stay-time="80" data-address="regist" bindtap="navto">
+    <view class="nav">
+      <image src="../../images/minenav.png"></image>
+      <text>个人资料</text>
+    </view>
+    <image src="../../images/right.png"></image>
+  </view>
+  <view class="mineinfo" hover-class="hoverview" hover-stay-time="80" data-address="cardlist" bindtap="navto">
+    <view class="nav">
+      <image src="../../images/cardnav.png"></image>
+      <text>打卡记录</text>
+    </view>
+    <image src="../../images/right.png"></image>
+  </view>
+  <view class="mineinfo" hover-class="hoverview" hover-stay-time="80" data-address="loginout" bindtap="navto">
+    <view class="nav">
+      <image src="../../images/loginout.png"></image>
+      <text>退出登录</text>
+    </view>
+  </view>
+
+
+</view>

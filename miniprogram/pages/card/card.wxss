@@ -1,0 +1,111 @@
+#container{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color:rgba(250,251,252,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.weather{
+  width: 98%;
+  height: 120px;
+  background-color: rgba(135, 206, 235, 0.9);
+  background: linear-gradient(141deg,rgba(159,184,173,0.9) 0%,rgba(31,200,219,0.9) 51%,rgba(44,181,232,0.9) 75%);
+  box-shadow: 2px 2px 2px #D2D2D2;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.weather text{
+  font-family:inherit ;
+  font-size: 16px;
+  color: #E0EFF4;
+  padding: 0px 3px;
+}
+.weather .loc{
+  width: 100%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5px;
+}
+.city image{
+  width: 20px;
+  height: 20px;
+}
+.refresh image{
+  width: 24px;
+  height: 24px;
+}
+.loc .city{
+  width: 90%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5px;
+}
+.loc .refresh{
+  width: 10%;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5px;
+}
+.weather .tips{
+  width: 60px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tips  .midtips{
+  width:60px;
+  font-family:inherit ;
+  font-size: 12px;
+  color: #E0EFF4;
+  padding: 0px 3px;
+  text-align: center;
+}
+.tips image{
+  width: 24px;
+  height: 24px;
+}
+.tips text{
+  font-family:inherit ;
+  font-size: 12px;
+  color: #E0EFF4;
+  padding: 0px 3px;
+}
+
+#container .clock{
+  width: 200px;
+  height: 200px;
+}
+#container .backimage{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -1;
+}
+#container .loctime{
+		color: #007aff;
+		font-size: 20px;
+    font-weight: 400;
+    font-family: inherit;
+		text-shadow:
+		1px 1px 0 #ACD3FD,
+		2px 2px 0 #ACD3FD, /* end of 2 level deep grey shadow */
+		3px 3px 0 #ACD3FD
+}
+.cardbutton{
+  background: linear-gradient(141deg,rgba(159,184,173,0.9) 0%,rgba(31,200,219,0.9) 51%,rgba(44,181,232,0.9) 75%);
+}

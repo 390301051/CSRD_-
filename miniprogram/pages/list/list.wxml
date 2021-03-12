@@ -1,0 +1,54 @@
+<!--pages/list/list.wxml-->
+<view id="container">
+    <!-- 选择部门与所在分公司 -->
+  <view id="chose">
+  <view class="inputs">
+  <picker class="mypicker" bindchange="classPicker" value="{{classindex}}" range="{{Classarray}}">
+    <view class="picker">
+      <text>{{Classarray[classindex]}}</text> 
+    </view>
+  </picker>
+</view>
+<view class="inputs">
+  <picker class="mypicker" bindchange="companyPicker" value="{{companyarrindex}}" range="{{companyarr}}">
+    <view class="picker">
+     <text>{{companyarr[companyarrindex]}}</text> 
+    </view>
+  </picker>
+</view>
+<view class="datechose">
+<picker mode="date" value="{{startvalue}}" start="2021-01-01" end="{{endtimepicker}}" bindchange="bindDateChange">
+    <view class="picker" style="">
+      <!-- <image src="../../images/date.png"></image> -->
+      <text>{{startvalue}}</text>
+    </view>
+  </picker>
+</view>
+<view class="mybutton">
+  <button type="primary" size="mini" bindtap="getMydata">查询</button>
+</view>
+</view>
+
+<scroll-view   style="height:{{scrollheight}}px;" class="usercard" scroll-y="true" enhanced="true" show-scrollbar="false"> 
+  <block wx:if="{{!isnodata}}">
+    <view class="topinfo" wx:for="{{mycardList}}" wx:for-index="index" wx:for-item="item" wx:key="id">
+    <view class="userimage">
+      <view class="myimage"><image class="headimage" src="{{item.myhead}}" mode="center" lazy-load="true"></image><image class="myheadimage" src="{{item.userimage}}" mode="center" lazy-load="true"></image></view>
+      <view  class="tips">
+        <text  style="font-family:cursive; font-size:16px">{{item.name}}</text>
+        <text  style=" font-family:cursive; font-size:12px; color:#07C160">{{item.class}}</text>
+        <text  style=" font-family:cursive; font-size:12px; color:#07C160">{{item.company}}</text>
+      </view>
+  </view>
+  <view class="carddays"><text style="font-size:12px;font-family:cursive;">打卡时间</text><image src="../../images/card.png" style="width:18px; height:18px;margin-right:8px"></image>:{{item.cardtime}}</view>
+  </view>
+</block>
+  <block wx:if="{{isnodata}}">
+  <view class="nodata">
+    <image src="../../images/nodata.png"></image>
+    <text style="font-size:14px; color:#BEBEBE">暂无数据</text>
+  </view>
+</block>
+</scroll-view>
+
+</view>
